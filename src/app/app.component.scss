@@ -1,0 +1,15 @@
+@use "./presenters/styles/variables.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 958px;
+  margin: 30px 20px;
+}
+
+@media (min-width: variables.$layout_breakpoint) {
+  .main {
+    margin: 30px auto;
+  }
+}

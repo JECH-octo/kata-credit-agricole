@@ -1,0 +1,7 @@
+<nav role="navigation" class="navbar">
+  <ul>
+    <li *ngFor="let lien of liensNavigation">
+      <a href="{{ lien?.url }}">{{ lien?.text }}</a>
+    </li>
+  </ul>
+</nav>
