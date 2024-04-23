@@ -1,7 +1,7 @@
 <div class="contrat-item-content">
   <div class="left-side">
     <div class="title-row">
-      <fa-icon [icon]="faFileContract"></fa-icon>
+      <i class="fa-solid fa-{{ donneeContrat.icon }}"></i>
       <p class="bold">{{ donneeContrat.title }}</p>
     </div>
     <div
@@ -19,7 +19,8 @@
       class="btn-modifier"
       title="Modifier {{ donneeContrat.title }}"
     >
-      <fa-icon [icon]="faPen"></fa-icon>Modifier
+      <i class="fa-solid fa-pen"></i>
+      Modifier
     </button>
   </div>
 </div>
