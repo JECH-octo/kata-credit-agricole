@@ -1,0 +1,25 @@
+<div class="contrat-item-content">
+  <div class="left-side">
+    <div class="title-row">
+      <fa-icon [icon]="faFileContract"></fa-icon>
+      <p class="bold">{{ donneeContrat.title }}</p>
+    </div>
+    <div
+      *ngFor="let item of donneeContrat.items; trackBy: itemTrackBy"
+      class="item-row"
+    >
+      <p>{{ item.label }}:</p>
+      <p class="bold" [innerHTML]="item.name"></p>
+    </div>
+  </div>
+  <div class="right-side">
+    <button
+      (click)="onBtnModifierClicked(donneeContrat.title)"
+      #btnModifier
+      class="btn-modifier"
+      title="Modifier {{ donneeContrat.title }}"
+    >
+      <fa-icon [icon]="faPen"></fa-icon>Modifier
+    </button>
+  </div>
+</div>

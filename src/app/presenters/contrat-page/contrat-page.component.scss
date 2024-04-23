@@ -1,1 +1,28 @@
+@use "../styles/colors.scss";
+@use "../styles/variables.scss";
 
+.contrat-card {
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contrat-header {
+  background-color: colors.$color-primary;
+  color: colors.$color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 1rem;
+}
+.item-contrat-container {
+  margin: 1rem;
+  border-bottom: solid 1px colors.$color-separator;
+}
+.item-contrat-container:last-child {
+  border-bottom: none;
+}
+.notification-click {
+  color: colors.$color-primary;
+}

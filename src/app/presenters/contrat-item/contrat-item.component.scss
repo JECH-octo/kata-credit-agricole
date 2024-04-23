@@ -1,0 +1,54 @@
+@use "../styles/colors.scss";
+@use "../styles/variables.scss";
+
+fa-icon {
+  color: colors.$color-icon;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contrat-item-content {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.item-row {
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+}
+.right-side {
+  border-left: solid 1px colors.$color-separator;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.btn-modifier {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem;
+  color: colors.$color-primary;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+// desktop
+@media (min-width: variables.$layout_breakpoint) {
+  .item-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+}

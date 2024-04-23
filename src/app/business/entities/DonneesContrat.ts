@@ -1,4 +1,4 @@
-interface itemContrat {
+export interface ItemContrat {
   label: string;
   name: string;
   url?: string;
@@ -7,5 +7,5 @@ interface itemContrat {
 export interface DonneesContrat {
   title: string;
   icon: string;
-  items: itemContrat[];
+  items: ItemContrat[];
 }

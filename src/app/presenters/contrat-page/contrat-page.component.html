@@ -1,3 +1,30 @@
 <section>
   <h1>Récapitulatif du contrat</h1>
+  <div class="contrat-card">
+    <div class="contrat-header">
+      <h2>Nouveau contrat</h2>
+      <select
+        name="filtreSection"
+        id="filtreSection"
+        [(ngModel)]="valeurFiltreSection"
+        (ngModelChange)="onSelectChange($event)"
+      >
+        <option [ngValue]="section" *ngFor="let section of selectOptions">
+          {{ section }}
+        </option>
+      </select>
+    </div>
+    <div
+      class="item-contrat-container"
+      *ngFor="
+        let donneeContrat of listeDonneesContrat$ | async;
+        trackBy: trackByTitle
+      "
+    >
+      <app-contrat-item [donneeContrat]="donneeContrat"></app-contrat-item>
+    </div>
+  </div>
+  <p class="notification-click">
+    {{ sectionMessageClicked$ | async }}
+  </p>
 </section>
